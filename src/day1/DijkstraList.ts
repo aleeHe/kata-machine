@@ -48,13 +48,13 @@ export default function dijkstra_list(
         }
     }
 
-    const out: number[] = [];
+    const path: number[] = [];
     let curr = sink;
     while (prev[curr] !== -1) {
-        out.push(curr);
+        path.push(curr);
         curr = prev[curr];
     }
 
-    out.push(source);
-    return out.reverse();
+    path.push(source);
+    return path.reverse();
 }

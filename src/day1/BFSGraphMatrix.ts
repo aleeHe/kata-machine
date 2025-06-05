@@ -30,12 +30,12 @@ export default function bfs(
     if (prev[needle] === -1) return null;
 
     let curr = needle;
-    const out: number[] = [];
+    const path: number[] = [];
 
     while (prev[curr] != -1) {
-        out.push(curr);
+        path.push(curr);
         curr = prev[curr];
     }
 
-    return [source, ...out.reverse()];
+    return [source, ...path.reverse()];
 }
